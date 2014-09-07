@@ -26,7 +26,7 @@
   "dependencies": {
     "audio-context": "^0.1.0",
     "form-serialize": "^0.3.0",
-    "mespeak": "^1.4.4-c"
+    "mespeak": "git+https://github.com/RangerMauve/mespeak.git"
   },
   "devDependencies": {
     "browserify": "^5.11.1",
