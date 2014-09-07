@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<title>Speakeasy</title>
+<link rel="stylesheet" href="style.css">
+<form id="voice_opts">
+	Options:
+	<div>
+		Amplitude:
+		<input type="text" name="amplitude" size=5 value="100" />
+	</div>
+	<div>
+		Pitch:
+		<input type="text" name="pitch" size=5 value="50" />
+	</div>
+	<div>
+		Speed:
+		<input type="text" name="speed" size=5 value="175" />
+	</div>
+	<div>
+		Word gap:
+		<input type="text" name="wordgap" size=5 value="0" />
+	</div>
+	<div>
+		Variant:
+		<select name="variant" id="variantSelect">
+			<option value="" selected>None</option>
+			<option value="f1">f1 (female 1)</option>
+			<option value="f2">f2 (female 2)</option>
+			<option value="f3">f3 (female 3)</option>
+			<option value="f4">f4 (female 4)</option>
+			<option value="f5">f5 (female 5)</option>
+			<option value="m1">m1 (male 1)</option>
+			<option value="m2">m2 (male 2)</option>
+			<option value="m3">m3 (male 3)</option>
+			<option value="m4">m4 (male 4)</option>
+			<option value="m5">m5 (male 5)</option>
+			<option value="m6">m6 (male 6)</option>
+			<option value="m7">m7 (male 7)</option>
+			<option value="croak">croak</option>
+			<option value="klatt">klatt</option>
+			<option value="klatt2">klatt2</option>
+			<option value="klatt3">klatt3</option>
+			<option value="whisper">whisper</option>
+			<option value="whisperf">whisperf (female)</option>
+		</select>
+	</div>
+</form>
+<script src="bundle.js"></script>
