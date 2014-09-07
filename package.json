@@ -25,6 +25,7 @@
   "homepage": "https://github.com/RangerMauve/speakeasy",
   "dependencies": {
     "audio-context": "^0.1.0",
+    "form-populate": "0.0.0",
     "form-serialize": "^0.3.0",
     "mespeak": "git+https://github.com/RangerMauve/mespeak.git"
   },

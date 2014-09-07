@@ -6,5 +6,9 @@ speech.loadConfig("mespeak_config.json");
 speech.loadVoice(voice);
 
 options.on("change", function(data) {
-	speech.speak("Welcome", data);
+	say("This is your new voice", data);
 });
+
+function say(message,opts){
+	speech.speak(message,opts);
+}
