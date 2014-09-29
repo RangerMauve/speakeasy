@@ -3,7 +3,7 @@ var options = require("./options.js");
 var sounds = require("./sounds.js");
 
 speech.loadConfig(require("mespeak/src/mespeak_config.json"));
-speech.loadVoice(require("mespeak/voices/en-us.json"));
+speech.loadVoice(require("mespeak/voices/en/en-us.json"));
 
 options.on("change", function(data) {
 	speech.stop();
