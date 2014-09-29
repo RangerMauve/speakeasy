@@ -7,6 +7,7 @@ var events = new EventEmitter();
 var option_key = "speakeasy:options:voice";
 
 form.addEventListener("submit", handle_submit);
+form.addEventListener("input",handle_submit);
 reload_opts();
 
 module.exports = events;
