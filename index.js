@@ -1,5 +1,6 @@
 var speech = require("mespeak");
 var options = require("./options.js");
+var sounds = require("./sounds.js");
 
 var voice = "en-us.json";
 speech.loadConfig("mespeak_config.json");
@@ -11,5 +12,7 @@ options.on("change", function(data) {
 });
 
 function say(message,opts){
-	speech.speak(message,opts);
+	opts.rawdata = true;
+	var data = speech.speak(message,opts);
+	sounds.play(data);
 }
