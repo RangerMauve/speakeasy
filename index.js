@@ -3,22 +3,24 @@ var options = require("./options.js");
 var sounds = require("./sounds.js");
 var tosay = document.getElementById("tosay");
 
-var socket = io.connect("172.20.10.7:8080");
+var socket = io.connect("localhost:8080");
 
 socket.on("speaking", function(data) {
+	console.log("Someone is speaking", data);
 	var opts = data.voice;
 	var message = data.message;
+	say(message, opts);
 })
 
 tosay.addEventListener("submit", function(e) {
 	e.preventDefault();
-	var data = tosay.text.value;
-	var opts = options.getOptions();
-	say(data, opts);
-	socket.emit("speak", {
-		voice: opts,
-		message: data
-	})
+	var data = {
+		message: tosay.text.value,
+		voice: options.getOptions()
+	};
+	say(data.message, data.voice);;
+	console.log("We are speaking", data);
+	socket.emit("speak", data);
 });
 
 speech.loadConfig(require("mespeak/src/mespeak_config.json"));
