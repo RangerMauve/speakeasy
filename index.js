@@ -3,7 +3,7 @@ var options = require("./options.js");
 var sounds = require("./sounds.js");
 var tosay = document.getElementById("tosay");
 
-var socket = io.connect("localhost:8080");
+var socket = io.connect("https://still-fjord-1172.herokuapp.com");
 
 socket.on("speaking", function(data) {
 	console.log("Someone is speaking", data);
