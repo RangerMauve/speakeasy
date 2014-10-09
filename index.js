@@ -3,14 +3,7 @@ var options = require("./options.js");
 var sounds = require("./sounds.js");
 var tosay = document.getElementById("tosay");
 
-var socket = io.connect("https://still-fjord-1172.herokuapp.com");
-
-socket.on("speaking", function(data) {
-	console.log("Someone is speaking", data);
-	var opts = data.voice;
-	var message = data.message;
-	say(message, opts);
-})
+// TODO: Listen for remote voices
 
 tosay.addEventListener("submit", function(e) {
 	e.preventDefault();
@@ -20,7 +13,7 @@ tosay.addEventListener("submit", function(e) {
 	};
 	say(data.message, data.voice);;
 	console.log("We are speaking", data);
-	socket.emit("speak", data);
+	// TODO: Send out voice
 });
 
 speech.loadConfig(require("mespeak/src/mespeak_config.json"));
