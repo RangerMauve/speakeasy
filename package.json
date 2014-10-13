@@ -25,10 +25,12 @@
   "homepage": "https://github.com/RangerMauve/speakeasy",
   "dependencies": {
     "audio-context": "^0.1.0",
+    "dnode": "^1.2.0",
     "form-populate": "0.0.0",
     "form-serialize": "^0.3.0",
     "mespeak": "git+https://github.com/RangerMauve/mespeak.git",
-    "randomvoice": "0.0.0"
+    "randomvoice": "0.0.0",
+    "websocket-stream": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^5.11.1",
